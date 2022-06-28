@@ -147,7 +147,7 @@ public class UIManager : MonoBehaviour
             else
             {
                 GoToPage(pausePageIndex);
-                Time.timeScale = 0f;
+                Time.timeScale = 0;
                 isPaused = true;
             }
         }      
@@ -250,15 +250,6 @@ public class UIManager : MonoBehaviour
         UIPage page = pages.Find(item => item.name == pageName);
         int pageIndex = pages.IndexOf(page);
         GoToPage(pageIndex);
-    }
-
-    public void RetryGame()
-    {
-        SetUpUIElements();
-        foreach (UIelement uiElement in UIelements)
-        {
-            uiElement.UpdateUI();
-        }
     }
 
     /// <summary>
